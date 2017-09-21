@@ -24,6 +24,12 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'hashivim/vim-vagrant'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ekalinin/dockerfile.vim'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Bundle 'Valloric/YouCompleteMe'
@@ -79,6 +85,8 @@ set encoding=utf-8
 " Enable folding with the spacebar
 nnoremap <space> za
 nmap <F8> :TagbarToggle<CR>
+nnoremap <Leader>aj :%!python -m json.tool<CR>
+map <f12> :!start /min ctags -R .<cr>
 :tnoremap <Esc> <C-\><C-n>
 map <Tab> <C-W>w
 map <Bar> <C-W>v<C-W><Right>
