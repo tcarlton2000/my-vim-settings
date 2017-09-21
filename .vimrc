@@ -79,6 +79,10 @@ set encoding=utf-8
 " Enable folding with the spacebar
 nnoremap <space> za
 nmap <F8> :TagbarToggle<CR>
+:tnoremap <Esc> <C-\><C-n>
+map <Tab> <C-W>w
+map <Bar> <C-W>v<C-W><Right>
+map -     <C-W>s<C-W><Down>
 
 "python with virtualenv support
 py << EOF
