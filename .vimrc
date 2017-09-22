@@ -86,7 +86,7 @@ set encoding=utf-8
 nnoremap <space> za
 nmap <F8> :TagbarToggle<CR>
 nnoremap <Leader>aj :%!python -m json.tool<CR>
-map <f12> :!start /min ctags -R .<cr>
+map <f12> :!ctags -R .<cr>
 :tnoremap <Esc> <C-\><C-n>
 map <Tab> <C-W>w
 map <Bar> <C-W>v<C-W><Right>
