@@ -55,7 +55,7 @@ else
 endif
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -72,7 +72,7 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
@@ -91,6 +91,18 @@ map <f12> :!start /min ctags -R .<cr>
 map <Tab> <C-W>w
 map <Bar> <C-W>v<C-W><Right>
 map -     <C-W>s<C-W><Down>
+:tnoremap <M-h> <C-\><C-N><C-w>h
+:tnoremap <M-j> <C-\><C-N><C-w>j
+:tnoremap <M-k> <C-\><C-N><C-w>k
+:tnoremap <M-l> <C-\><C-N><C-w>l
+:inoremap <M-h> <C-\><C-N><C-w>h
+:inoremap <M-j> <C-\><C-N><C-w>j
+:inoremap <M-k> <C-\><C-N><C-w>k
+:inoremap <M-l> <C-\><C-N><C-w>l
+:nnoremap <M-h> <C-w>h
+:nnoremap <M-j> <C-w>j
+:nnoremap <M-k> <C-w>k
+:nnoremap <M-l> <C-w>l
 
 "python with virtualenv support
 py << EOF
@@ -129,3 +141,7 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
 \ }
+
+" Change where new windows appear
+set splitbelow
+set splitright
