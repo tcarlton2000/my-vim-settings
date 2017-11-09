@@ -63,6 +63,9 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Autocomplete imports on save
+let g:go_fmt_command = "goimports"
+
 au BufRead,BufNewFile *.go set filetype=go
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType go setlocal foldmethod=syntax
