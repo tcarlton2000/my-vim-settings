@@ -30,6 +30,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ekalinin/dockerfile.vim'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
+Plugin 'burnettk/vim-angular'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Bundle 'Valloric/YouCompleteMe'
@@ -39,6 +42,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set nu
+set rnu
 set clipboard=unnamed
 
 let g:ycm_autoclose_preview_window_after_completion=1
@@ -87,6 +91,7 @@ nnoremap <space> za
 nmap <F8> :TagbarToggle<CR>
 nnoremap <Leader>aj :%!python -m json.tool<CR>
 map <f12> :!ctags -R .<cr>
+map <f10> :vs note:Tasks<cr>
 :tnoremap <Esc> <C-\><C-n>
 map <Tab> <C-W>w
 map <Bar> <C-W>v<C-W><Right>
