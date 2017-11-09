@@ -33,6 +33,7 @@ Plugin 'ekalinin/dockerfile.vim'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
 Plugin 'burnettk/vim-angular'
+Plugin 'mileszs/ack.vim'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Bundle 'Valloric/YouCompleteMe'
